@@ -9,7 +9,7 @@ filelist = os.listdir(dir)
 for video_file in filelist:
 	if video_file[-4:len(video_file)] in video_ext:
 		video_name = video_file
-		pos = re.search('s\d\de\d\d', video_name, re.I).span()
+		pos = re.search('s\d\de\d\d|ep\d\d', video_name, re.I).span()
 		ep = video_name[pos[0]:pos[1]]
 		for sub_file in filelist:
 			ext = sub_file[-4:len(sub_file)]
