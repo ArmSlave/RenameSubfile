@@ -15,5 +15,5 @@ for video_file in filelist:
 			ext = sub_file[-4:len(sub_file)]
 			if ext in sub_ext:
 				if (sub_file.find(ep)+sub_file.find(ep.swapcase())) > -1:
-					print sub_file+'->'+video_name[0:-4]+ext
+					print (sub_file+'->'+video_name[0:-4]+ext)
 					os.rename(sub_file,video_name[0:-4]+ext)
